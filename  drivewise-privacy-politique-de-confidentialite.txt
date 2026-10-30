@@ -1,0 +1,411 @@
+Application Android · Google Play
+
+Politique de confidentialité DriveWise
+======================================
+
+DriveWise est une application d’entraînement au Code de la route qui
+fonctionne entièrement hors ligne. Elle ne collecte, ne
+transmet et ne partage aucune donnée personnelle.
+
+  - 100 % hors ligne
+  - Aucun compte requis
+  - Aucune donnée collectée
+  - Aucune publicité
+  - Aucun SDK tiers
+
+Dernière mise à jour : 30 octobre 2026 ·
+Application version 1.0.0 ·
+Identifiant : com.drivewise.drivingtheory
+
+SOMMAIRE
+---------
+  1. Résumé en un coup d’œil
+  2. Responsable du traitement
+  3. Données collectées
+  4. Permissions Android
+  5. SDK, bibliothèques et services tiers
+  6. Partage des données avec des tiers
+  7. Utilisation des données
+  8. Conservation et suppression
+  9. Sécurité
+  10. Publicité
+  11. Intelligence artificielle
+  12. Enfants
+  13. Droits des personnes concernées
+  14. Transferts internationaux
+  15. Modifications de la politique
+  16. Contact
+  17. Informations à compléter
+  18. Annexe technique
+
+1. Résumé en un coup d’œil
+--------------------------
+
+  > En une phrase
+  > DriveWise ne collecte aucune donnée personnelle : aucun compte,
+  > aucun serveur, aucune publicité, aucun outil de mesure d’audience.
+  > Votre progression reste uniquement sur votre appareil.
+
+SYNTHÈSE CONFORME AUX EXIGENCES DE FICHE GOOGLE PLAY
+
+| Question                                   | Réponse                                   |
++--------------------------------------------+-------------------------------------------+
+| Données personnelles collectées            | Aucune                                    |
+| Données transmises vers un serveur         | Aucune                                    |
+| Compte / identifiant utilisateur           | Aucun                                     |
+| Permissions Android demandées              | Aucune permission sensible                |
+| SDK publicitaires, analytics, IA           | Aucun                                     |
+| Partage avec des tiers                     | Aucun                                     |
+| Stockage des données                       | Locale, sur l’appareil uniquement         |
+| Sauvegarde cloud automatique               | Désactivée                                |
+| Publicités                                 | Aucune dans la version 1.0.0              |
+| Consultation de cette politique dans l’app | Paramètres → Politique de confidentialité |
+
+2. Responsable du traitement
+----------------------------
+
+Le responsable du traitement des données liées à l’application
+DriveWise est l’éditeur de l’application, désigné sur Google Play
+dans la section Coordonnées du développeur de la fiche de
+l’application.
+
+  ! ⚠️ Information manquante — à compléter avant publication
+  ! L’identité complète (nom légal ou raison sociale), l’adresse
+  ! postale et l’adresse e-mail de contact du responsable du traitement
+  ! n’existent dans aucune partie du code source du
+  ! projet : elles ne peuvent donc pas être affirmées ici. Remplacez l’encadré
+  ! ci-dessous par vos informations réelles, ou confirmez que le
+  ! seul canal de contact est la fiche Google Play.
+
+  ! À compléter
+  ! Nom de l’éditeur : [NOM ÉDITEUR] ·
+  ! E-mail de contact : [ADRESSE E-MAIL] ·
+  ! Adresse : [ADRESSE POSTALE]
+
+Pour toute question relative à la confidentialité, vous pouvez contacter
+l’éditeur depuis la fiche de l’application sur Google Play
+(play.google.com/store/apps/details?id=com.drivewise.drivingtheory
+<https://play.google.com/store/apps/details?id=com.drivewise.drivingtheory>).
+
+3. Données collectées
+---------------------
+
+DriveWise ne collecte aucune donnée personnelle au sens du
+RGPD et de la loi algérienne 18-07. Il n’existe ni inscription, ni
+compte, ni formulaire de création de profil.
+
+3.1 Ce qui n’est pas collecté
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  - nom, prénom, adresse e-mail, numéro de téléphone ;
+  - identifiant d’appareil, publicité ou autre (Advertising ID) ;
+  - position géographique ;
+  - contacts, photos, fichiers, micro, appareil photo ;
+  - historique de navigation web ou d’applications ;
+  - données de usage envoyées à un serveur (aucun serveur n’est contacté)
+    ;
+  - données d’ouvwerture d’application transmises à un tiers.
+
+3.2 Données créées localement (sur votre appareil uniquement)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pour fonctionner, l’application écrit des données de progression
+pédagogique dans son espace de stockage privé. Ces données ne quittent
+jamais l’appareil et ne contiennent aucune information vous
+identifiant personnellement :
+
+VÉRIFIÉE DANS LE CODE SOURCE (FICHIERS PROGRESSDB.KT, SETTINGSSTORE.KT,
+FAVORITESSTORE.KT)
+
+| Stockage local                       | Contenu                                      | Nature                                    |
++--------------------------------------+----------------------------------------------+-------------------------------------------+
+| Base SQLite drivewise_progress.db    | Réponses aux questions, scores de sessions…  | Donnée de progression, non personnelle    |
+| Préférences drivewise_settings       | Langue d’interface (français / arabe), pays… | Préférences d’affichage                   |
+| Préférences drivewise_session        | État d’une session d’entraînement en cours…  | État fonctionnel temporaire               |
+| Préférences drivewise_sign_favorites | Panneaux de signalisation marqués favoris    | Préférences personnelles de l’utilisateur |
+
+  > Remarque sur les liens de sources
+  > Le contenu réglementaire embarqué (fichiers de configuration par pays)
+  > contient des URL de sources officielles citées à titre
+  > documentaire. Elles sont affichées comme texte : l’application
+  > ne les ouvre pas automatiquement et n’effectue aucune requête vers elles.
+
+4. Permissions Android
+----------------------
+
+Analyse du fichier AndroidManifest.xml et du manifeste
+fusionné généré par le build :
+
+MANIFESTE FUSIONNÉ DE LA VERSION RELEASE (PAQUET COM.DRIVEWISE.DRIVINGTHEORY,
+VERSIONCODE 1)
+
+| Permission                                   | Présente | Effet pour l’utilisateur                     |
++----------------------------------------------+----------+----------------------------------------------+
+| android.permission.INTERNET                  | Non      | L’application ne peut techniquement ouvrir…  |
+| Localisation, appareil photo, microphone,…   | Non      | Aucune demande de permission sensible,…      |
+| …DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION    | Oui      | Permission interne signature auto-déclarée…  |
+| Composant AndroidX ProfileInstallReceiver…   | Oui      | Composant interne d’optimisation des…        |
+
+  > Conclusion
+  > DriveWise ne demande aucune permission donnant accès à des
+  > données personnelles. Elle ne peut ni lire vos contacts, vos
+  > photos ou votre position, ni accéder à Internet.
+
+5. SDK, bibliothèques et services tiers
+---------------------------------------
+
+Liste exhaustive des dépendances compilées dans l’application,
+relevée dans app/build.gradle.kts :
+
+SEULES LES DÉPENDANCES IMPLEMENTATION SONT EMBARQUÉES DANS L’APK/AAB ; LES
+DÉPENDANCES DE TEST NE LE SONT PAS
+
+| Bibliothèque                                 | Fournisseur       | Rôle                         | Accès aux données |
++----------------------------------------------+-------------------+------------------------------+-------------------+
+| androidx.core:core-ktx 1.13.1                | Google / AndroidX | Compatibilité Android        | Aucun             |
+| androidx.activity:activity-compose 1.9.2     | Google / AndroidX | Gestion de l’écran           | Aucun             |
+| androidx.lifecycle:*-compose 2.8.6           | Google / AndroidX | Cycle de vie de l’interface  | Aucun             |
+| androidx.navigation:navigation-compose 2.8.2 | Google / AndroidX | Navigation entre écrans      | Aucun             |
+| androidx.compose.* (BOM 2024.09.03,…         | Google / AndroidX | Interface utilisateur        | Aucun             |
+| kotlinx-coroutines-android 1.8.1             | JetBrains         | Exécution asynchrone interne | Aucun             |
+
+CATÉGORIES DE SERVICES EXPLICITEMENT RECHERCHÉES DANS LE CODE SOURCE —
+RÉSULTAT
+
+| Type de SDK                                  | Présent ? |
++----------------------------------------------+-----------+
+| Publicité (AdMob, Facebook Ads, AppLovin…)   | Absent    |
+| Analyse d’audience (Firebase Analytics,…     | Absent    |
+| Mesure d’attribution (AppsFlyer, Adjust…)    | Absent    |
+| Crash reporting (Crashlytics, Sentry…)       | Absent    |
+| Réseaux sociaux (SDK de partage, boutons de… | Absent    |
+| Services Google Play (play-services)         | Absent    |
+| Intelligence artificielle / API distante     | Absent    |
+| SDK de paiement                              | Absent    |
+
+Le code source ne contient aucun appel réseau
+(java.net, HttpURLConnection, OkHttp, Retrofit,
+Volley, Ktor : aucune occurrence), aucun WebView, et
+aucun journal d’exécution (Log.d/i/w/e
+ou println : aucune occurrence dans le code produit).
+
+6. Partage des données avec des tiers
+-------------------------------------
+
+  > Aucun partage
+  > DriveWise ne vend, ne loue, ne transmet et ne met à la disposition d’aucun
+  > tiers — y compris l’éditeur — aucune donnée, puisqu’aucune donnée
+  > n’est collectée et qu’aucune communication réseau n’est possible.
+  > Il n’existe aucun fournisseur de service, sous-traitant, analyseur de
+  > trafic ou destinataire de données.
+
+Google Play lui-même reçoit de Google les données d’installation et
+d’usage standard de la boutique : celles-ci sont générées par
+Google Store et non par l’application, et relèvent de la politique de
+confidentialité de Google.
+
+7. Utilisation des données
+--------------------------
+
+Les données créées localement servivent exclusivement :
+
+  1. afficher et conserver votre progression pédagogique (scores,
+     statistiques) ;
+  2. mémoriser vos réponses et votre liste d’erreurs ;
+  3. reprendre une session d’entraînement là où vous l’avez laissée ;
+  4. mémoriser vos favoris et vos préférences d’affichage (langue, pays) ;
+  5. assurer le fonctionnement interne de l’application (redémarrage, état
+     des écrans).
+
+Aucune de ces données n’est utilisée à des fins de profilage, de
+personnalisation publicitaire, de prise de décision automatisée ou
+d’élaboration de statistiques transmises à un tiers.
+
+Base légale : en l’absence de toute donnée
+personnelle et de tout traitement transmis, aucun consentement n’est
+requis. Le stockage strictement local relève de votre contrôle direct sur
+votre appareil.
+
+8. Conservation et suppression
+------------------------------
+
+Les données restent sur votre appareil jusqu’à leur
+suppression par vous. Aucune copie n’est conservée ailleurs,
+puisqu’aucune donnée ne quitte l’appareil. Aucune période de
+conservation serveur n’existe à annoncer.
+
+Vous pouvez tout effacer à tout moment :
+
+  - dans l’application : Paramètres → Données locales → Réinitialiser ma
+    progression ;
+  - depuis Android : Paramètres → Applications → DriveWise → Stockage →
+    Effacer les données ;
+  - en désinstallant l’application (sous réserve des pratiques de votre
+    constructeur).
+
+La suppression est immédiate et définitive. Comme
+android:allowBackup="false" et
+android:fullBackupContent="false" sont déclarés, aucune
+sauvegarde Google Drive ni sauvegarde Android automatique ne conserve ces
+données.
+
+  > Demande de suppression des données
+  > Aucune donnée n’étant détenue par l’éditeur, aucune demande de
+  > suppression ne peut être traitée par lui. La suppression sur l’appareil
+  > (ci-dessus) est la suppression effective et complète.
+
+9. Sécurité
+-----------
+
+  - Aucun transit réseau : l’absence de permission INTERNET supprime tout
+    risque d’interception, de Man-in-the-Middle ou de fuite en transit.
+  - Cloisonnement du système Android : les données sont écrites dans
+    l’espace privé de l’application (sandbox), accessibles à elle et à
+    vous seul, sur un appareil non rooté.
+  - Aucune donnée hors appareil : pas de cloud, pas de base de données
+    distante, pas de sauvegarde automatique.
+  - Aucun compte : pas de mot de passe, pas de jeton de session, pas de
+    surface d’attaque liée à l’authentification.
+  - Aucun journal : l’application n’écrit aucun log d’exécution contenant
+    des informations sur votre activité.
+
+Si vous détectez une faille de sécurité, signalez-la à l’éditeur via
+la fiche Google Play : elle sera corrigée dans une mise à jour.
+
+10. Publicité
+-------------
+
+La version 1.0.0 ne contient aucune publicité : ni
+bannière, ni interstitiel, ni placement de produit, ni lien commercial
+rémunéré, ni SDK publicitaire.
+
+  ! ⚠️ Élément déclaré dans l’application à surveiller
+  ! Le texte affiché dans Paramètres → Politique de confidentialité
+  ! précise qu’« les publicités éventuelles, si une version
+  ! monetarisée est publiée, seront ajoutées hors des questions et hors des
+  ! examens, avec le consentement requis ». Aucune publicité n’est
+  ! présente aujourd’hui : ce passage décrit une éventuelle évolution
+  ! future. Si une version monetarisée est publiée, cette politique
+  ! devra être mise à jour avant sa mise en ligne (nouvelles
+  ! données, SDK éventuels, base légale du consentement).
+
+11. Intelligence artificielle
+-----------------------------
+
+DriveWise n’intègre aucun service d’intelligence
+artificielle : aucune API distante d’IA, aucun modèle
+exécuté dans le cloud, aucun assistant conversationnel, aucun envoi de
+contenu vers un service tiers. Les questions, réponses et panneaux sont
+embarqués dans l’installation et traités localement.
+
+12. Enfants
+-----------
+
+DriveWise est un support pédagogique général. Elle ne demande ni âge, ni
+nom, ni toute autre donnée d’identification, et n’est pas
+spécifiquement conçue pour les enfants. Comme aucune donnée n’est
+collectée, aucun consentement parental n’est requis. La classification
+par âge déclarée sur Google Play est déterminée par l’éditeur dans la
+fiche de publication.
+
+13. Droits des personnes concernées
+-----------------------------------
+
+Conformément au RGPD (pour les personnes résidant dans l’Union
+européenne) et à la loi 18-07 relative à la protection des données à
+caractère personnel (pour l’Algérie), vous disposez notamment des
+droits d’accès, de rectification, d’effacement, d’opposition
+et de portabilité.
+
+| Droit                    | Comment l’exercer                            |
++--------------------------+----------------------------------------------+
+| Accès                    | Les données existent sur votre appareil :…   |
+| Rectification            | Corrigez ou annulez vos réponses depuis les… |
+| Effacement               | Paramètres → Données locales →…              |
+| Portabilité              | Données détenues localement, vous en…        |
+| Opposition / réclamation | Contact de l’éditeur (section 2) ou…         |
+
+En cas de désaccord, vous pouvez saisir l’autorité de contrôle
+compétente (en Algérie : l’Autorité de protection des données
+personnelles ; dans l’Union européenne : la CNIL ou
+l’autorité de votre pays de résidence).
+
+14. Transferts internationaux
+-----------------------------
+
+Aucune donnée n’étant collectée ni transmise, aucun transfert
+international de données n’a lieu. L’application ne
+contacte aucun serveur, dans aucun pays.
+
+15. Modifications de la politique
+---------------------------------
+
+Toute évolution de l’application susceptible de modifier les pratiques
+décrites ici sera répercutée sur cette page, avec une mise à jour de la
+date figurant en en-tête. Une modification importante sera également
+signalée dans les notes de version sur Google Play, et le lien de la
+politique reste le même tant que cette page reste en ligne.
+
+16. Contact
+-----------
+
+Pour toute question relative à la confidentialité : utiliser la
+section Coordonnées du développeur de la fiche DriveWise sur
+Google Play :
+play.google.com/store/apps/details?id=com.drivewise.drivingtheory
+<https://play.google.com/store/apps/details?id=com.drivewise.drivingtheory>
+Vérifier la disponibilité
+
+Note : à la date de rédaction de ce document, la fiche DriveWise
+n’était pas encore publiée sur Google Play ; cette URL deviendra
+active après publication.
+
+17. Informations manquantes à compléter avant publication
+---------------------------------------------------------
+
+  ! Ce que le code source ne permet pas d’affirmer
+  ! Les éléments suivants sont absents du projet et ont été
+  ! laissés en placeholder plutôt que d’être inventés. Ils doivent être
+  ! renseignés par l’éditeur avant de soumettre l’URL à Google :
+
+  !   - À compléter Identité de l’éditeur : nom légal / raison sociale
+  !     (section 2) ;
+  !   - À compléter Adresse e-mail et adresse postale de contact (section 2) ;
+  !   - À confirmer Date d’entrée en vigueur effective de cette version de la
+  !     politique (30 octobre 2026 proposée) ;
+  !   - À obtenir L’URL publique HTTPS définitive, disponible une fois GitHub
+  !     Pages activé (section 18 ci-dessous et instructions de publication) ;
+  !   - À vérifier Disponibilité de la fiche Play à l’identifiant
+  !     com.drivewise.drivingtheory après publication ;
+  !   - À décider Politique de classement par âge et éventuelle monétisation
+  !     future (section 10), qui déclencherait une mise à jour de ce document.
+
+18. Annexe technique — vérifications effectuées
+-----------------------------------------------
+
+Les affirmations de ce document ne sont pas déclaratives : elles
+résultent d’une analyse du code source de l’application. Les
+contrôles suivants ont été réalisés sur le projet (version 1.0.0) :
+
+| Vérification                     | Élément examiné                              | Résultat                                     |
++----------------------------------+----------------------------------------------+----------------------------------------------+
+| Permissions déclarées            | app/src/main/AndroidManifest.xml +…          | Aucune uses-permission hors permission…      |
+| Permission réseau                | Manifeste fusionné                           | INTERNET absente                             |
+| Dépendances embarquées           | app/build.gradle.kts (bloc implementation)   | Uniquement AndroidX / Jetpack Compose /…     |
+| SDK pub, analytics, IA, paiement | Recherche plein texte dans app/src           | Aucune occurrence                            |
+| Appels réseau                    | Recherche java.net, HttpURLConnection,…      | Aucune occurrence                            |
+| Journalisation                   | Recherche Log.d/i/w/e, println               | Aucune occurrence dans le code produit       |
+| Sauvegarde cloud                 | Attributs allowBackup, fullBackupContent     | false / false                                |
+| Stockages locaux                 | ProgressDb.kt, SettingsStore.kt,…            | 1 base SQLite + 3 fichiers de préférences,…  |
+| Identité applicative             | app/build.gradle.kts, manifeste fusionné     | com.drivewise.drivingtheory, version 1.0.0…  |
+
+Méthode : lecture directe du code source, recherche plein texte des
+bibliothèques et API suspectes, et inspection du manifeste réellement
+produit par le build (et non du fichier source seul).
+
+DriveWise · Politique de confidentialité ·
+Version de l’application 1.0.0 (com.drivewise.drivingtheory) ·
+Document mis à jour le 30 octobre 2026
+
+Application hors ligne, sans compte, sans publicité, sans SDK tiers,
+sans collecte de données.
